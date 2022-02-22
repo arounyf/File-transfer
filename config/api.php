@@ -1,7 +1,7 @@
 <?php
 
 //通知配置
-function sct_send($desp,$key='key'){
+function sct_send($desp,$key=''){
     $postdata = http_build_query( array( 'content' => $desp, 'key' => $key ));
     $opts = array('http' =>
     array(
@@ -26,7 +26,7 @@ $cosurl = "/$cosfile";  //下载请求地址
 $cos = "https://liang23-1252891785.cos.ap-chengdu.myqcloud.com"; 
 
 //高速下载api
-function get_downurl($cosurl,$cos,$time='120',$coskey='key'){
+function get_downurl($cosurl,$cos,$time='120',$coskey=''){
     $postdata = http_build_query( array( 'time' => $time, 'url' => $cosurl , 'key' => $coskey , 'cos' => $cos ));
     $opts = array('http' =>
     array(
