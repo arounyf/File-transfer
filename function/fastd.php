@@ -16,7 +16,7 @@ if(!file_exists("../upload/$str")){
     $nowdate = date("Y-m-d H:i:s",time());
     $minute=floor((strtotime($nowdate)-strtotime($startdate))%86400/60);
     //如果时间小于5分钟则不下载
-    if ($minute<0){
+    if ($minute<5){
         echo('<script>alert("歇息会吧，请待会再来");top.location="../index.php";</script>'); 
     }else{
         //高速下载配置
